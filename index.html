@@ -23,7 +23,7 @@
                     <li><a href="#hhome">Home</a></li>
                     <li><a href="#aboutus">About us</a></li>
                     <li><a href="./tasknasa/index.html">Game</a></li>
-                    <li><a href="https://www.canva.com/design/DAGSjB_8Wxk/UeSmQhJinM3QWQ4NI-ikCw/edit">More Details</a></li>
+                    <li><a href="Spce (1).pptx">More Details</a></li>
 
                     <li class="nav-item aa">
                         <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" >
@@ -259,37 +259,23 @@
     </div>            
     </footer>
     <script>
-// إخفاء headerBody عند فتح offcanvas
-document.querySelector('.nav-link').addEventListener('click', function() {
-    var headerBody = document.querySelector('.headerBody');
-    headerBody.remove(); // إزالة العنصر من الـ DOM
-});
-
-// إظهار headerBody عند إغلاق offcanvas
-document.getElementById('offcanvasExample').addEventListener('hidden.bs.offcanvas', function () {
-    // إعادة بناء العنصر headerBody
-    var newHeaderBody = document.createElement('div');
-    newHeaderBody.className = 'headerBody';
-    newHeaderBody.innerHTML = `
-            <div class="container">
-                <div class="content">
-                     <small>Welcome to</small>
-                     <h1>Nasa Navigators</h1>
-                      <a href="./tasknasa/index.html">
-                        <button>Go To The Game</button>
-                    </a>                       
-                </div>
-                <div class="moonPart">
-                    <div class="moon">
-                        <div></div>
-                    </div>
-                </div>           
-        </div>  
-    `;
-    document.body.insertBefore(newHeaderBody, document.body.firstChild); // إضافة العنصر الجديد كأول عنصر في body
-});
-
-    </script>
+        // إخفاء headerBody عند فتح offcanvas باستخدام transform
+        document.querySelector('.nav-link').addEventListener('click', function() {
+            var headerBody = document.querySelector('.headerBody');
+            headerBody.style.transform = 'translateY(-100%)';  // تحريك العنصر لأعلى خارج الشاشة
+            headerBody.style.opacity = '0';  // إخفاء العنصر
+            headerBody.style.transition = 'transform 0.5s, opacity 0.5s'; // إضافة تأثير التحويل لجعل الحركة تدريجية
+        });
+        
+        // إظهار headerBody عند إغلاق offcanvas
+        document.getElementById('offcanvasExample').addEventListener('hidden.bs.offcanvas', function () {
+            var headerBody = document.querySelector('.headerBody');
+            headerBody.style.transform = 'translateY(0)'; // إرجاع العنصر إلى مكانه الأصلي
+            headerBody.style.opacity = '1';  // إعادة إظهار العنصر
+        });
+        </script>
+        
+    
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   

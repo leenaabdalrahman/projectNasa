@@ -160,7 +160,6 @@ nav ul li a:hover{
     margin: auto;
     overflow: hidden;
     border-radius: 50%;
-    z-index: 9999999999999999999999999999999999999999; /* تعيين قيمة z-index المناسبة */
 
     transition: transform 1s ease, background-color 0.3s ease, box-shadow 0.1s ease;
     box-shadow: 0 0 20px 20px #000 inset, 0 0 30px -10px;
