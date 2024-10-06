@@ -25,8 +25,8 @@
                     <li><a href="./tasknasa/index.html">Game</a></li>
                     <li><a href="https://www.canva.com/design/DAGSjB_8Wxk/UeSmQhJinM3QWQ4NI-ikCw/edit">More Details</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" >
+                    <li class="nav-item aa">
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" >
                             Download Our App
                         </a>
                     </li>
@@ -39,7 +39,7 @@
                         <h5 class="offcanvas-title" id="offcanvasExampleLabel" dir="rtl">لتحميل التطبيق </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="z-index: 999999999999999999999;"></button>
                     </div>
-                    <div class="offcanvas-body" > <!-- إضافة خاصية لمحاذاة النص -->
+                    <div class="offcanvas-body Note" > <!-- إضافة خاصية لمحاذاة النص -->
                         <div>
                             <ol dir="rtl" style="text-align: right;"> <!-- إضافة خاصية لتحديد اتجاه الكتابة -->
                                 <li>قم بتنزيل الملف بالضغط على زر download</li>
@@ -72,6 +72,8 @@
             </div>
             
         </nav>
+
+
         <div class="headerBody">
             <div class="container">
                 <div class="content">
@@ -79,6 +81,7 @@
                      <h1>Nasa Navigators</h1>
                       <a href="./tasknasa/index.html">
                         <button>Go To The Game</button>
+                        
                     </a>                       
                 </div>
                 <div class="moonPart">
@@ -268,18 +271,25 @@ document.getElementById('offcanvasExample').addEventListener('hidden.bs.offcanva
     var newHeaderBody = document.createElement('div');
     newHeaderBody.className = 'headerBody';
     newHeaderBody.innerHTML = `
-        <div class="container">
-            <div class="content">
-                <small>Welcome to</small>
-                <h1>Nasa Navigators</h1>
-                <a href="./tasknasa/index.html"><button>Go To The Game</button></a>
-            </div>
-            <div class="moonPart">
-                <div class="moon">
-                    <div></div>
+            <div class="container">
+                <div class="content">
+                     <small>Welcome to</small>
+                     <h1>Nasa Navigators</h1>
+                      <a href="./tasknasa/index.html">
+                        <button>Go To The Game</button>
+                        <button class="nav-item">
+                            <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" >
+                                Download Our App
+                            </a>
+                        </button>
+                    </a>                       
                 </div>
-            </div>
-        </div>
+                <div class="moonPart">
+                    <div class="moon">
+                        <div></div>
+                    </div>
+                </div>           
+        </div>  
     `;
     document.body.insertBefore(newHeaderBody, document.body.firstChild); // إضافة العنصر الجديد كأول عنصر في body
 });
