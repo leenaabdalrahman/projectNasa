@@ -16,6 +16,13 @@ body {
     width: 200px;
     padding: 10px;
 }
+.aa{
+    background-color: #d4b66e;
+    border-radius: 10px;
+    color: #000;
+    animation: pulse 2s infinite; /* يستمر النبض بشكل دائم */
+    transition: transform 0.2s ease-in-out;
+}
 /* Stars Background Animation 
 .stars {
     position: fixed;
