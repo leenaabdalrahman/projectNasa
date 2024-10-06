@@ -26,7 +26,7 @@
                     <li><a href="Spce (1).pptx">More Details</a></li>
 
                     <li class="nav-item aa">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" >
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" id="downloadBtn" role="button" aria-controls="offcanvasExample" >
                             Download Our App
                         </a>
                     </li>
@@ -273,6 +273,20 @@
             headerBody.style.transform = 'translateY(0)'; // إرجاع العنصر إلى مكانه الأصلي
             headerBody.style.opacity = '1';  // إعادة إظهار العنصر
         });
+        </script>
+          <script>
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                const fileUrl = 'https://github.com/leenaabdalrahman/projectNasa/raw/main/final/final.zip'; // استخدم الرابط المباشر
+            
+                const a = document.createElement('a');
+                a.href = fileUrl;
+                a.download = 'final.zip'; // اسم الملف عند تحميله
+                
+                // إرفاق الرابط إلى الوثيقة، النقر عليه، ثم إزالته
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
         </script>
         
     
