@@ -1,9 +1,9 @@
 // Array of Correct Answers for Each Task
 const correctAnswers = [
-    "1", // Replace with actual answer for Planet 1
-    "2", // Replace with actual answer for Planet 2
-    "3", // Replace with actual answer for Planet 3
-    "4"  // Replace with actual answer for Planet 4
+    "HD 3167", // Replace with actual answer for Planet 1
+    "HD 3167 c", // Replace with actual answer for Planet 2
+    "Gaia DR3 1981076480148452608 ", // Replace with actual answer for Planet 3
+    "light brown"  // Replace with actual answer for Planet 4
 ];
 
 let currentTaskId = -1;
@@ -27,13 +27,13 @@ function showTaskPopup(taskId) {
         currentTaskId = taskId;
         document.getElementById("taskPopup").classList.remove("hidden");
         if(taskId == 1){
-        document.getElementById("taskQuestion").innerText = `Go to one of the four planets, then look for a square-shaped star sign and take the sign symbol`;}
+        document.getElementById("taskQuestion").innerText = ` What is the name of the star around which this planet revolves?`;}
         if(taskId == 2){
-            document.getElementById("taskQuestion").innerText = `Will be added soon${taskId} `;}
+            document.getElementById("taskQuestion").innerText = `What is the name of this planet?`;}
             if(taskId == 3){
-                document.getElementById("taskQuestion").innerText = `Will be added soon ${taskId}:`;}
+                document.getElementById("taskQuestion").innerText = `Find the star through (Dec : 52.00120768 - RA:329.4768348 ) and give me its name`;}
                 if(taskId ==4){
-                    document.getElementById("taskQuestion").innerText = `Will be added soon ${taskId}:`;}
+                    document.getElementById("taskQuestion").innerText = ` What color is the soil of this planet?`;}
     }
 }
 
